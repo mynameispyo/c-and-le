@@ -9,10 +9,10 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
       //   $mail->SMTPDebug = 2;
   $mail->SMTPSecure = "ssl";
   $mail->SMTPAuth = true;
-  $mail->Host = "smtp.naver.com";
+  $mail->Host = "smtp.myemail.com";
   $mail->Port = 465;
-  $mail->Username = "the3countrys@naver.com";
-  $mail->Password = "Dongjaeng2@";
+  $mail->Username = "myaccount@myemail.com";
+  $mail->Password = "password";
   $mail->CharSet = 'UTF-8';
   $mail->From = $fmail;
   $mail->FromName = $fname;
@@ -31,6 +31,5 @@ function mailer($fname, $fmail, $to, $subject, $content, $type=0, $file="", $cc=
   }
   if ( $mail->send() ) echo "Yor reqeust successfully send it";
 }
-mailer("info@c-and-le.tk","the3countrys@naver.com","mynameispyo@gmail.com",$title,$story);
 
 ?>
